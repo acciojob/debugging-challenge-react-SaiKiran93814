@@ -1,19 +1,18 @@
-import React from 'react';
-import Header from './Header';
-import Form from './Form';
-import Footer from './Footer';
+import React, { useState } from 'react';
 
-function App() {
+const App = () => {
+  const [count, setCount] = useState(0);
+
+  const handleClick = () => setCount(count + 1);
+
   return (
     <div className="app-container">
-      <Header />
-      <main>
-        <h1>Welcome to JSX Fix Challenge</h1>
-        <Form />
-      </main>
-      <Footer />
+      <h1>{count}</h1>
+      <button onClick={handleClick} className="increment-btn">
+        Increment
+      </button>
     </div>
   );
-}
+};
 
 export default App;
