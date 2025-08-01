@@ -1,17 +1,19 @@
-import React, { useEffect, useState } from "react";
-import '../styles/App.css';
+import React from 'react';
+import Header from './Header';
+import Form from './Form';
+import Footer from './Footer';
 
-const App = () => {
-
-  let [count, setCount] = useState(0)
-
+function App() {
   return (
-    <div class="ball">
-      <h1 class="count" ondoubleclick={() => { alert("cant edit it") }}>{count}</h1>
-      <button class='increment-button' onclick={() => { setCount(count + 1) }}>Increment</button>
+    <div className="app-container">
+      <Header />
+      <main>
+        <h1>Welcome to JSX Fix Challenge</h1>
+        <Form />
+      </main>
+      <Footer />
     </div>
-  )
+  );
 }
-
 
 export default App;
